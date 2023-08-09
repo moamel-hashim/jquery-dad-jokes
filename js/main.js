@@ -11,5 +11,5 @@ $(document).ready(function () {
 });
 
 $('.emoji-container').on('click', function () {
-  $(this).hide();
+  $(this).addClass('hide');
 });
