@@ -30,3 +30,7 @@ img {
 .flex-direction-column {
   flex-direction: column;
 }
+
+.text-align-center {
+  text-align: center;
+}
