@@ -9,3 +9,7 @@ $(document).ready(function () {
     }
   );
 });
+
+$('.emoji-container').on('click', function () {
+  $(this).addClass('hide');
+});

@@ -15,7 +15,7 @@
   \********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n$(document).ready(function () {\n  $('button.emoji').hover(function () {\n    $(this).css({\n      transform: 'scale(1.2)',\n      transition: 'transform 0.5s'\n    });\n  }, function () {\n    $(this).css({\n      transform: 'scale(1)',\n      transition: 'transform 0.5s'\n    });\n  });\n});\n\n//# sourceURL=webpack://ajax-project/./js/main.js?");
+eval("const $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n$(document).ready(function () {\n  $('button.emoji').hover(function () {\n    $(this).css({\n      transform: 'scale(1.2)',\n      transition: 'transform 0.5s'\n    });\n  }, function () {\n    $(this).css({\n      transform: 'scale(1)',\n      transition: 'transform 0.5s'\n    });\n  });\n});\n$('.emoji-container').on('click', function () {\n  $(this).addClass('hide');\n});\n\n//# sourceURL=webpack://ajax-project/./js/main.js?");
 
 /***/ }),
 
