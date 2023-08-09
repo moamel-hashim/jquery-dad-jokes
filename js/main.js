@@ -50,5 +50,4 @@ $(document).ready(function () {
 
   const dadJokesArray = [];
   let dadJokesIndex = -1;
-  console.log('value of dadjokesarray', dadJokesArray);
 });
