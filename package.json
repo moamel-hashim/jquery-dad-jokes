@@ -5,7 +5,8 @@
   "description": "A dynamic HTML, CSS, jQuery, and JavaScript solo project.",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "dev": "webpack --mode development"
   },
   "keywords": [],
   "devDependencies": {

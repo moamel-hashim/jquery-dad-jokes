@@ -8,12 +8,6 @@ body {
   font-size: 7rem;
   cursor: pointer;
   user-select: none;
-  transform: scale(1);
-  transition: 0.5s;
-}
-
-.emoji:hover {
-  transform: scale(1.1);
 }
 
 h1 {

@@ -1,4 +1,11 @@
 const $ = require('jquery');
 $(document).ready(function () {
-  console.log('hi');
+  $('button.emoji').hover(
+    function () {
+      $(this).css({ transform: 'scale(1.2)', transition: 'transform 0.5s' });
+    },
+    function () {
+      $(this).css({ transform: 'scale(1)', transition: 'transform 0.5s' });
+    }
+  );
 });
