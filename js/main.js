@@ -1,7 +1,4 @@
-import $ from './node_modules/jquery/dist/jquery.min.js';
-
+const $ = require('jquery');
 $(document).ready(function () {
-  $('.emoji').click(function () {
-    $('p').add('its working');
-  });
+  console.log('hi');
 });

@@ -1,8 +1,9 @@
 {
   "root": true,
   "env": {
-    "node": false,
-    "browser": true
+    "node": true,
+    "browser": true,
+    "commonjs": true
   },
   "parserOptions": {
     "sourceType": "module"
