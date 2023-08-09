@@ -12,3 +12,7 @@ body {
   transform: scale(1);
   transition: 0.5s;
 }
+
+.emoji:hover {
+  transform: scale(1.2);
+}
