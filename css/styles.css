@@ -2,7 +2,6 @@ body {
   background-color: #5b5548;
 }
 
-
 .emoji {
   background: transparent;
   border: none;
@@ -14,5 +13,11 @@ body {
 }
 
 .emoji:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+}
+
+h1 {
+  color: #e5e5e5;
+  font-family: Pacifico, sans-serif;
+  font-weight: 400;
 }
