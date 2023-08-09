@@ -1,0 +1,32 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.height-100vh {
+  height: 100vh;
+}
+
+.col-full {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}

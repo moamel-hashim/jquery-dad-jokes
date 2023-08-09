@@ -1,0 +1,23 @@
+body {
+  background-color: #5b5548;
+}
+
+.emoji {
+  background: transparent;
+  border: none;
+  font-size: 7rem;
+  cursor: pointer;
+  user-select: none;
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.emoji:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  color: #e5e5e5;
+  font-family: Pacifico, sans-serif;
+  font-weight: 400;
+}
