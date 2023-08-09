@@ -23,3 +23,9 @@ a {
 .h1-container {
   border-bottom: 1px solid whitesmoke;
 }
+
+.jokes {
+  color: white;
+  font-size: 400;
+  font-family: Roboto, sans-serif;
+}
