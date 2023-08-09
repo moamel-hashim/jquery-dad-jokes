@@ -1,22 +1,20 @@
 const $ = require('jquery');
 $(document).ready(function () {
-
   const settings = {
     async: true,
     crossDomain: true,
-    url: 'https://dad-jokes.p.rapidapi.com/random/joke',
+    url: 'https://icanhazdadjoke.com/',
     method: 'GET',
+    dataType: 'json',
     headers: {
-      'X-RapidAPI-Key': '19cde8be53mshba709677a7fe40ep101cbcjsnf2989692780b',
-      'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
+      Accept: 'application/json'
     }
   };
 
   $.ajax(settings).done(function (response) {
-    const setup = response.body[0].setup;
-    const punchline = response.body[0].punchline;
-    $('.jokes').text(`${setup} ${punchline}`);
-    dadJokesArray.push(`${setup} ${punchline}`);
+    const dadJoke = response.joke;
+    $('.jokes').text(`${dadJoke}`);
+    dadJokesArray.push(dadJoke);
   });
   $('button.emoji').hover(
     function () {
@@ -29,5 +27,27 @@ $(document).ready(function () {
   $('.emoji-container').on('click', function () {
     $(this).addClass('hide');
   });
+
+  $('.fa-chevron-right').on('click', function () {
+    dadJokesIndex++;
+    if (dadJokesArray[dadJokesIndex] === undefined) {
+      $.ajax(settings).done(function (response) {
+        const dadJoke = response.joke;
+        $('.jokes').text(`${dadJoke}`);
+        dadJokesArray.push(dadJoke);
+      });
+    } else {
+      $('.jokes').text(dadJokesArray[dadJokesIndex]);
+    }
+  });
+
+  $('.fa-chevron-left').on('click', function () {
+    if (dadJokesIndex > 0) {
+      dadJokesIndex--;
+      $('.jokes').text(dadJokesArray[dadJokesIndex]);
+    }
+  });
+
   const dadJokesArray = [];
+  let dadJokesIndex = -1;
 });
