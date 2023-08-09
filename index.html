@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,24 +19,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;500&display=swap" rel="stylesheet">
   <title>Dad Jokes</title>
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <div class="flex justify-center align-items-center height-100vh col-full flex-direction-column emoji-container">
-        <button class="emoji"><img src="https://em-content.zobj.net/thumbs/160/apple/354/grinning-face_1f600.png" alt="Iphone smiling emoji"></button>
-        <h1>Dad Jokes</h1>
+  <main>
+    <header>
+      <div class="container">
+        <div class="flex justify-center align-items-center height-100vh col-full flex-direction-column emoji-container">
+          <button class="emoji"><img src="https://em-content.zobj.net/thumbs/160/apple/354/grinning-face_1f600.png"
+              alt="Iphone smiling emoji"></button>
+          <h1>Dad Jokes</h1>
+        </div>
       </div>
-    </div>
-    <nav>
-      <div class="text-align-center h1-container">
-        <a href="#"><h1>Dad Jokes</h1></a>
+      <nav>
+        <div class="text-align-center h1-container">
+          <a href="#">
+            <h1>Dad Jokes</h1>
+          </a>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="p-container flex justify-center align-items-center height-100vh col-full flex-direction-column">
+          <p class="jokes"></p>
+        </div>
       </div>
-    </nav>
-  </header>
+    </header>
+  </main>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <!-- <script src="js/jQuery.js"></script> -->
   <script src="js/main.js" type="module"></script>
   <script src="dist/bundle.js"></script>
   <script src="js/data.js"></script>
 </body>
+
 </html>
