@@ -1,0 +1,14 @@
+body {
+  background-color: #5b5548;
+}
+
+
+.emoji {
+  background: transparent;
+  border: none;
+  font-size: 7rem;
+  cursor: pointer;
+  user-select: none;
+  transform: scale(1);
+  transition: 0.5s;
+}
