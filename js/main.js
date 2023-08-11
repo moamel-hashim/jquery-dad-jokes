@@ -58,11 +58,13 @@ $(document).ready(function () {
 
   $('.favorite-emoji').on('click', function () {
     const currentSrc = $('.favorite-emoji img').attr('src');
+    const laughingFace = 'https://em-content.zobj.net/thumbs/120/apple/354/face-with-tears-of-joy_1f602.png'
+    const smilingFace = 'https://em-content.zobj.net/thumbs/160/apple/354/grinning-face_1f600.png'
 
-    if (currentSrc === 'https://em-content.zobj.net/thumbs/120/apple/354/face-with-tears-of-joy_1f602.png') {
-      $('.favorite-emoji img').attr('src', 'https://em-content.zobj.net/thumbs/160/apple/354/grinning-face_1f600.png');
+    if (currentSrc === laughingFace) {
+      $('.favorite-emoji img').attr('src', smilingFace);
     } else {
-      $('.favorite-emoji img').attr('src', 'https://em-content.zobj.net/thumbs/120/apple/354/face-with-tears-of-joy_1f602.png');
+      $('.favorite-emoji img').attr('src', laughingFace);
     }
   });
 
