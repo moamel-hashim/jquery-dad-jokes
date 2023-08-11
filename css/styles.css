@@ -45,3 +45,24 @@ a {
   color: white;
   font-size: 1.3rem;
 }
+
+.chevron-left {
+  position: absolute;
+  left: 0;
+  bottom: 1rem;
+}
+
+.chevron-right {
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+}
+
+.favorite-emoji {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+  width: 10%;
+}
