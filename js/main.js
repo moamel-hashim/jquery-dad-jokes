@@ -48,6 +48,24 @@ $(document).ready(function () {
     }
   });
 
+  $('.favorite-emoji').hover(function () {
+    $(this).css({ transform: 'scale(1.2)', transition: 'transform 0.5s' });
+  },
+  function () {
+    $(this).css({ transform: 'scale(1)', transition: 'transform 0.5s' });
+  }
+  );
+
+  $('.favorite-emoji').on('click', function () {
+    const currentSrc = $('.favorite-emoji img').attr('src');
+
+    if (currentSrc === 'https://em-content.zobj.net/thumbs/120/apple/354/face-with-tears-of-joy_1f602.png') {
+      $('.favorite-emoji img').attr('src', 'https://em-content.zobj.net/thumbs/160/apple/354/grinning-face_1f600.png');
+    } else {
+      $('.favorite-emoji img').attr('src', 'https://em-content.zobj.net/thumbs/120/apple/354/face-with-tears-of-joy_1f602.png');
+    }
+  });
+
   const dadJokesArray = [];
   let dadJokesIndex = -1;
 });
