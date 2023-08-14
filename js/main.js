@@ -105,6 +105,7 @@ $(document).ready(function () {
   $('.favorite').on('click', function() {
     $('.main-page').addClass('hide');
     $('div.no-favorite-container').removeClass('hide');
+    $('.favorite-page').removeClass('hide');
   });
 
   if(data.favorite.length === 0) {
@@ -113,4 +114,10 @@ $(document).ready(function () {
     newDiv.append(newH3);
     $('.favorite-page').append(newDiv);
   };
+  for(let i = 0; i < data.favorite.length; i++) {
+    const newDiv = $('<div>').addClass('')
+    const newLi = $('<li>').text(data.favorite[i]);
+    newDiv.append(newLi);
+    $('ul').append(newDiv);
+  }
 });
