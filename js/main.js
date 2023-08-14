@@ -104,10 +104,13 @@ $(document).ready(function () {
 
   $('.favorite').on('click', function() {
     $('.main-page').addClass('hide');
+    $('div.no-favorite-container').removeClass('hide');
   });
 
   if(data.favorite.length === 0) {
-    return $()
-  }
-
+    const newDiv = $('<div>').addClass('no-favorite-container hide text-align-center');
+    const newH3 = $('<h3>').addClass('no-favorite').text('Please add a favorite');
+    newDiv.append(newH3);
+    $('.favorite-page').append(newDiv);
+  };
 });

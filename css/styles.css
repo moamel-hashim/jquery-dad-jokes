@@ -69,3 +69,8 @@ a {
 .joke-container {
   width: 75%;
 }
+
+h3 {
+  color: white;
+  font-family: Roboto, sans-serif;
+}
