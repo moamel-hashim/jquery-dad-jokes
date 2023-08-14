@@ -3,6 +3,10 @@
   margin: 0 auto;
 }
 
+.hide {
+  display: none;
+}
+
 .flex {
   display: flex;
 }
@@ -35,10 +39,6 @@ img {
   text-align: center;
 }
 
-.hide {
-  display: none;
-}
-
 .height-40vh {
   height: 40vh;
 }
@@ -49,4 +49,8 @@ img {
 
 .position-relative {
   position: relative;
+}
+
+.justify-content-space-evenly {
+  justify-content: space-evenly;
 }
