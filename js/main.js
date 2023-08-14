@@ -50,8 +50,10 @@ $(document).ready(function () {
       $(this).css({ transform: 'scale(1)', transition: 'transform 0.5s' });
     }
   );
-  $('.emoji-container').on('click', function () {
-    $(this).addClass('hide');
+  $('button.emoji').on('click', function () {
+    $('.home-page').addClass('hide');
+    $('nav').removeClass('hide');
+    $('.main-page').removeClass('hide');
   });
 
   $('.fa-chevron-right').on('click', function () {
@@ -99,5 +101,13 @@ $(document).ready(function () {
     }
     updateFavoriteEmoji();
   });
+
+  $('.favorite').on('click', function() {
+    $('.main-page').addClass('hide');
+  });
+
+  if(data.favorite.length === 0) {
+    return $()
+  }
 
 });

@@ -1,6 +1,5 @@
 body {
   background-color: #5b5548;
-  overflow: hidden;
 }
 
 .emoji {
@@ -48,13 +47,13 @@ a {
 
 .chevron-left {
   position: absolute;
-  left: 0;
+  left: 2rem;
   bottom: 1rem;
 }
 
 .chevron-right {
   position: absolute;
-  right: 0;
+  right: 2rem;
   bottom: 1rem;
 }
 
@@ -65,4 +64,8 @@ a {
   cursor: pointer;
   user-select: none;
   width: 10%;
+}
+
+.joke-container {
+  width: 75%;
 }
