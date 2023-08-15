@@ -114,20 +114,66 @@ $(document).ready(function () {
     $('.favorite-page').append(newDiv);
   }
   for (let i = 0; i < data.favorite.length; i++) {
-    const newDiv = $('<div>').addClass('favorite-joke-container');
+    data.id++;
+    const newDiv = $('<div>').addClass('favorite-joke-container').attr('data-id', data.id);
     const newDiv2 = $('<div>').addClass('delete-icon-container flex justify-content-end');
     const liDiv = $('<div>').addClass('');
-    const newLi = $('<li>').text(data.favorite[i]).attr('data-id', data.id);
+    const newLi = $('<li>').text(data.favorite[i]);
     const newI = $('<i>').addClass('fa-solid fa-trash-can');
     newDiv.append(newDiv2);
     newDiv2.append(newI);
     newDiv.append(liDiv);
     liDiv.append(newLi);
     $('ul').append(newDiv);
-    data.id++;
   }
+  
+  const newModel = $('<div>').addClass('model');
+  const closeModel = $('<div>').addClass('close');
+  const closeButton = $('<button>').addClass('close-button').text('X');
+  const p = $('<p>').text('are you sure you want to delete this?');
+  const buttonContainer = $('<div>').addClass('flex justify-content-space-evenly confirm-buttons-container');
+  const yesButton = $('<button>').addClass('yes').text('yes');
+  const noButton = $('<button>').addClass('no').text('no');
+  newModel.append(closeModel);
+  closeModel.append(closeButton);
+  newModel.append(p);
+  newModel.append(buttonContainer);
+  buttonContainer.append(yesButton);
+  buttonContainer.append(noButton);
+  $('.model-container').append(newModel);
 
   $('.fa-trash-can').on('click', function () {
+    const trashIcon = $(this);
+    const dataId = parseInt(trashIcon.closest('div').parent('div').attr('data-id'));
+    console.log(dataId);
+    $('.model-container').removeClass('hide');
+    $('.overlay').removeClass('hide');
+
+    $('.close-button').on('click', function () {
+      $('.overlay').addClass('hide');
+      $('.model-container').addClass('hide');
+
+    });
+
+    $('.no').on('click', function() {
+      $('.overlay').addClass('hide');
+      $('.model-container').addClass('hide');
+    });
+
+    $('.yes').on('click', function() {
+      console.log('if dataId === data.favorite', data.favorite.findIndex(id => id === dataId) !== -1);
+      console.log(data.id)
+      console.log('value of dataId',dataId);
+      // const indexToRemove = data.favorite.indexOf(dataId);
+          // console.log('if is working');
+          data.favorite.splice(dataId, 1);
+          $(`div.favorite-joke-container[data-id="${dataId}"]`).remove();
+          $('.overlay').addClass('hide');
+          $('.model-container').addClass('hide');
+        // console.log(dataId);
+      });
 
   });
+
+
 });
