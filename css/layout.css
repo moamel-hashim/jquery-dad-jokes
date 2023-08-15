@@ -54,3 +54,7 @@ img {
 .justify-content-space-evenly {
   justify-content: space-evenly;
 }
+
+.justify-content-end {
+  justify-content: end;
+}

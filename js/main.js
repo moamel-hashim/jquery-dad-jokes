@@ -1,9 +1,8 @@
 /* import data */
 
-
 const $ = require('jquery');
-const laughingFace = 'https://em-content.zobj.net/thumbs/120/apple/354/face-with-tears-of-joy_1f602.png'
-const smilingFace = 'https://em-content.zobj.net/thumbs/160/apple/354/grinning-face_1f600.png'
+const laughingFace = 'https://em-content.zobj.net/thumbs/120/apple/354/face-with-tears-of-joy_1f602.png';
+const smilingFace = 'https://em-content.zobj.net/thumbs/160/apple/354/grinning-face_1f600.png';
 $(document).ready(function () {
   let dadJokesIndex = 0;
   const dadJokesArray = [];
@@ -19,12 +18,12 @@ $(document).ready(function () {
   };
 
   function updateFavoriteEmoji() {
-    if(data.favorite.indexOf(dadJokesArray[dadJokesIndex]) !== -1 ) {
+    if (data.favorite.indexOf(dadJokesArray[dadJokesIndex]) !== -1) {
       $('.favorite-emoji img').attr('src', laughingFace);
     } else {
       $('.favorite-emoji img').attr('src', smilingFace);
     }
-  };
+  }
 
   function toggleFavorite(joke) {
     const index = data.favorite.indexOf(joke);
@@ -67,8 +66,8 @@ $(document).ready(function () {
       });
     } else {
       $('.jokes').text(dadJokesArray[dadJokesIndex]);
-      updateFavoriteEmoji();
     }
+    updateFavoriteEmoji();
     updateFavoriteEmoji();
   });
 
@@ -102,22 +101,33 @@ $(document).ready(function () {
     updateFavoriteEmoji();
   });
 
-  $('.favorite').on('click', function() {
+  $('.favorite').on('click', function () {
     $('.main-page').addClass('hide');
     $('div.no-favorite-container').removeClass('hide');
     $('.favorite-page').removeClass('hide');
   });
 
-  if(data.favorite.length === 0) {
+  if (data.favorite.length === 0) {
     const newDiv = $('<div>').addClass('no-favorite-container hide text-align-center');
     const newH3 = $('<h3>').addClass('no-favorite').text('Please add a favorite');
     newDiv.append(newH3);
     $('.favorite-page').append(newDiv);
-  };
-  for(let i = 0; i < data.favorite.length; i++) {
-    const newDiv = $('<div>').addClass('')
-    const newLi = $('<li>').text(data.favorite[i]);
-    newDiv.append(newLi);
-    $('ul').append(newDiv);
   }
+  for (let i = 0; i < data.favorite.length; i++) {
+    const newDiv = $('<div>').addClass('favorite-joke-container');
+    const newDiv2 = $('<div>').addClass('delete-icon-container flex justify-content-end');
+    const liDiv = $('<div>').addClass('');
+    const newLi = $('<li>').text(data.favorite[i]).attr('data-id', data.id);
+    const newI = $('<i>').addClass('fa-solid fa-trash-can');
+    newDiv.append(newDiv2);
+    newDiv2.append(newI);
+    newDiv.append(liDiv);
+    liDiv.append(newLi);
+    $('ul').append(newDiv);
+    data.id++;
+  }
+
+  $('.fa-trash-can').on('click', function () {
+
+  });
 });

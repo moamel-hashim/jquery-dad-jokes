@@ -48,13 +48,13 @@ a {
 .chevron-left {
   position: absolute;
   left: 2rem;
-  bottom: 1rem;
+  bottom: 2rem;
 }
 
 .chevron-right {
   position: absolute;
   right: 2rem;
-  bottom: 1rem;
+  bottom: 2rem;
 }
 
 .favorite-emoji {
@@ -73,4 +73,104 @@ a {
 h3 {
   color: white;
   font-family: Roboto, sans-serif;
+}
+
+li {
+  list-style: none;
+  color: white;
+  font-family: Roboto, sans-serif;
+}
+
+.favorite-joke-container {
+  padding: 2rem;
+  margin: 2rem;
+  border-bottom: solid 1px whitesmoke;
+}
+
+.fa-trash-can {
+  color: rgba(175, 18, 18, 0.896);
+  font-size: 1.5rem;
+}
+
+.overlay {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  background: #0000006b;
+}
+
+.model-container {
+  width: 25%;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.close {
+  text-align: end;
+  margin: 0.5rem;
+}
+
+.model {
+  text-align: center;
+  color: white;
+  font-size: 1.1rem;
+  font-family: Roboto, sans-serif;
+  background-color: #5b5548;
+  border-radius: 5px;
+  z-index: 1;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.yes {
+  padding: 0.5rem 2rem;
+  background-color: hsla(102deg, 68%, 39%, 0.589);
+  border-radius: 5px;
+  border: none;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.yes:hover {
+  background-color: hsla(102deg, 79%, 16%, 0.885);
+}
+
+.confirm-buttons-container {
+  margin: 2rem 0 1rem;
+}
+
+.no {
+  padding: 0.5rem 2rem;
+  background-color: hsla(16deg, 69%, 31%, 0.531);
+  border-radius: 5px;
+  border: none;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.no:hover {
+  background-color: hsla(16deg, 84%, 37%, 0.711);
+}
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  color: whitesmoke;
+  font-size: 1.1rem;
+  font-family: Roboto, sans-serif;
+  transition: 0.5s;
+}
+
+.close-button:hover {
+  color: hsl(16deg, 84%, 37%);
 }
