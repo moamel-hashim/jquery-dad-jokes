@@ -154,22 +154,22 @@ $(document).ready(function () {
 
     });
 
-    $('.no').on('click', function() {
+    $('.no').on('click', function () {
       $('.overlay').addClass('hide');
       $('.model-container').addClass('hide');
     });
 
-    $('.yes').on('click', function() {
-          data.favorite.splice(dataId, 1);
-          $(`div.favorite-joke-container[data-id="${dataId}"]`).remove();
-          $('.overlay').addClass('hide');
-          $('.model-container').addClass('hide');
-      });
+    $('.yes').on('click', function () {
+      data.favorite.splice(dataId, 1);
+      $(`div.favorite-joke-container[data-id="${dataId}"]`).remove();
+      $('.overlay').addClass('hide');
+      $('.model-container').addClass('hide');
+    });
   });
 
-  $('a.dad-jokes').on('click', function() {
+  $('a.dad-jokes').on('click', function () {
     $('.favorite-page').addClass('hide');
     $('.main-page').removeClass('hide');
-  })
+  });
 
 });
