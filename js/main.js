@@ -126,8 +126,8 @@ $(document).ready(function () {
     liDiv.append(newLi);
     $('ul').append(newDiv);
   }
-  
-  const newModel = $('<div>').addClass('model');
+
+  const newModel = $('<div>').addClass('model col-full');
   const closeModel = $('<div>').addClass('close');
   const closeButton = $('<button>').addClass('close-button').text('X');
   const p = $('<p>').text('are you sure you want to delete this?');
@@ -145,7 +145,6 @@ $(document).ready(function () {
   $('.fa-trash-can').on('click', function () {
     const trashIcon = $(this);
     const dataId = parseInt(trashIcon.closest('div').parent('div').attr('data-id'));
-    console.log(dataId);
     $('.model-container').removeClass('hide');
     $('.overlay').removeClass('hide');
 
@@ -161,19 +160,16 @@ $(document).ready(function () {
     });
 
     $('.yes').on('click', function() {
-      console.log('if dataId === data.favorite', data.favorite.findIndex(id => id === dataId) !== -1);
-      console.log(data.id)
-      console.log('value of dataId',dataId);
-      // const indexToRemove = data.favorite.indexOf(dataId);
-          // console.log('if is working');
           data.favorite.splice(dataId, 1);
           $(`div.favorite-joke-container[data-id="${dataId}"]`).remove();
           $('.overlay').addClass('hide');
           $('.model-container').addClass('hide');
-        // console.log(dataId);
       });
-
   });
 
+  $('a.dad-jokes').on('click', function() {
+    $('.favorite-page').addClass('hide');
+    $('.main-page').removeClass('hide');
+  })
 
 });
