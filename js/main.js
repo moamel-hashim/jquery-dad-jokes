@@ -155,17 +155,22 @@ $(document).ready(function () {
     $('.model-container').empty();
     handleModel();
     $('.model-container').removeClass('hide');
+    $('.overlay').css({'width': $(window).width() + 'px', 'height': $(window).width() + 'px'});
     $('.overlay').removeClass('hide');
+    $('body').addClass('overflow');
+
 
     $('.close-button').on('click', function () {
       $('.overlay').addClass('hide');
       $('.model-container').addClass('hide');
+      $('body').removeClass('overflow');
 
     });
 
     $('.no').on('click', function () {
       $('.overlay').addClass('hide');
       $('.model-container').addClass('hide');
+      $('body').removeClass('overflow');
     });
 
     $('.yes').off('click').on('click', function () {
@@ -173,6 +178,7 @@ $(document).ready(function () {
       $(`div.favorite-joke-container[data-id="${dataId}"]`).remove();
       $('.overlay').addClass('hide');
       $('.model-container').addClass('hide');
+      $('body').removeClass('overflow');
       checkIfFavoriteArrayHoldsValue();
       handleFavorite();
     });

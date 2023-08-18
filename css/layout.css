@@ -58,3 +58,18 @@ img {
 .justify-content-end {
   justify-content: end;
 }
+
+@media screen and (max-width: 900px) {
+  ul {
+    padding: 0;
+  }
+
+  .favorite-joke-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  li {
+    width: 90%;
+  }
+}
