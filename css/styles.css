@@ -65,12 +65,16 @@ a {
   width: 85%;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }
 
 h3 {
   color: white;
   font-family: Roboto, sans-serif;
+}
+
+ul {
+  padding: 0;
 }
 
 li {
