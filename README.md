@@ -13,8 +13,8 @@ A dynamic HTML, CSS, and JavaScript solo project with jQuery.
   <li>jQuery XML API</li>
 </ul>
 
-<h1>Live Demo</h1>
-Try the live application at ![dad jokes](https://moamel-hashim.github.io/jquery-dad-jokes/)
+## Live Demo
+Try the live application at ![Dad Jokes](https://moamel-hashim.github.io/jquery-dad-jokes/)
 
 ## Features 
 - User can view dad jokes that are pulled from the API
