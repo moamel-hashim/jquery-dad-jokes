@@ -14,7 +14,7 @@ A dynamic HTML, CSS, and JavaScript solo project with jQuery.
 </ul>
 
 ## Live Demo
-Try the live application at ![Dad Jokes](https://moamel-hashim.github.io/jquery-dad-jokes/)
+Try the live application at https://moamel-hashim.github.io/jquery-dad-jokes/
 
 ## Features 
 - User can view dad jokes that are pulled from the API
