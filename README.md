@@ -36,7 +36,7 @@ Try the live application at ![Dad Jokes](https://moamel-hashim.github.io/jquery-
 1. Clone the repository
    ```shell
    git clone git@github.com:moamel-hashim/jquery-dad-jokes.git
-   then you would need to cd into the repos
+   //then you would need to cd into the repos
    cd jquery-dad-jokes
    ```
    
